@@ -6,41 +6,50 @@
 // Solar Elevation Angle
 function RetreiveInputs() {
   // Array + Module Info
-  var ModuleWidthId = document.getElementById("ModuleWidth")
-  var RowsInArrayId = document.getElemenyById("NumberOfRows")
-  var RowGapId = document.getElemenyById("RowGap")
-  var ArrayTiltId = document.getElementById("ArrayTilt")
+  var ModuleWidthId = document.getElementById("ModuleWidth");
+  var RowsInArrayId = document.getElemenyById("NumberOfRows");
+  var RowGapId = document.getElemenyById("RowGap");
+  var ArrayTiltId = document.getElementById("ArrayTilt");
 
-  var ZipCodeId =  document.getElementById("ZipCode")
-  var SolarElevationAngleId = document.getElementById("solarElevationAngle")
+  var ZipCodeId =  document.getElementById("ZipCode");
+  var SolarElevationAngleId = document.getElementById("solarElevationAngle");
 
-  var ArrayWidthSum =  (ModuleWidthId * RowsInArrayId) + (RowGapId * (RowsInArrayId - 1))
-  var HeightDifference = (HeightDifferenceCalc(ArrayTiltId, ArrayWidthSum))
-  var ArraySpacing = (ArraySpacingCalc(HeightDifference, SolarElevationAngleId))
+  // CALCULATIONS
+  var ArrayWidthSum =  (ModuleWidthId * RowsInArrayId) + (RowGapId * (RowsInArrayId - 1));
+  var HeightDifference = (HeightDifferenceCalc(ArrayTiltId, ArrayWidthSum));
+  var ArraySpacing = (ArraySpacingCalc(HeightDifference, SolarElevationAngleId));
+  
+  // MEASUREMENTS TO RETURN
+  var MinimumArrayRow = (MinimumArrayRowSpacingCalc(ArraySpacing, AzimuthCorrectionAngle));
+  var RowWidth = RowWidthCalc(MinimumArrayRow, ArrayTiltId, ArrayWidthSum)
 }
 
 // 2. Calculate for HeightDifference
-function HeightDifferenceCalc(ArrayTiltId, ArrayWidthSum) {
-  var ConvertToRadians = (ArrayTiltId * Math.PI)/180
-  var HeightDifference = Math.sin(ConvertToRadians) * ArrayWidthSum
-  return Math.round(HeightDifference)
+function HeightDifferenceCalc(ArrayTilt, ArrayWidth) {
+    var HeightDifference = Math.sin(ToRadians(ArrayTilt)) * ArrayWidth;
+  return Math.round(HeightDifference);
 }
 
 // 3. Calculate for Array Spacing
 function ArraySpacingCalc(HeightDifference, SolarElevationAngle) {
-  var ArraySpacing = HeightDifference / Math.tan(SolarElevationAngle)
-  return Math.round(ArraySpacing)
+  var ArraySpacing = HeightDifference / Math.tan(SolarElevationAngle);
+  return Math.round(ArraySpacing);
 }
 
 // 4. Calculate for Minimum Array Row Spacing
 function MinimumArrayRowSpacingCalc(ArraySpacing, AzimuthCorrectionAngle) {
   // MEASUREMENT FOR SPACE BETWEEN ARRAYS
-  var MinimumArrayRowSpacing =  ArraySpacing * Math.cos(AzimuthCorrectionAngle)
+  return (ArraySpacing * Math.cos(ToRadians(AzimuthCorrectionAngle)));
 }
 
 // 5. Calculate for Row Width
-function RowWidthCalc() {
+function RowWidthCalc(MinimumArrayRow, ArrayTilt, ArrayWidth) {
+  return MinimumArrayRow + (Math.cos(ToRadians(ArrayTilt)) * ArrayWidth)
+}
 
+// Degrees > radians
+function ToRadians(x) {
+  return (x * Math.PI)/180;
 }
 
 function SaveModuleLocal() {}
