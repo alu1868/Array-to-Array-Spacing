@@ -52,6 +52,7 @@ function ToRadians(x) {
   return (x * Math.PI)/180;
 }
 
+// LOCAL STORAGE MANIPULATION
 function SaveModuleLocal() {}
 
 function DeployModuleArray() {}
