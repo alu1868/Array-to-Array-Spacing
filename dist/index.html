@@ -5,18 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Array to Array Spacing</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
   <header>
     <div>
       <!-- NAV BAR -->
-      <nav></nav>
+      <nav>
+        <a id="nav-logo" href="index.html"></a>
+        <ul>
+          <li><a href="index.html">Calculator</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
       <!-- INTRODUCTION -->
       <div></div>
     </div>
   </header>
+
   <!-- APPLICATION CONTENT -->
   <content>
     <div>
@@ -24,7 +32,16 @@
       <aside>
         <div>
           <!-- MODULE INFO INPUT -->
-          <form></form>
+          <form>
+            <div>
+              <input type="text" placeholder="Module Name" name="name"/>
+              <input type="text" placeholder="Module Width" name="width"/>
+              <input type="text" placeholder="# of Rows" name="row"/>
+              <input type="text" placeholder="Array Tilt" name="tilt"/>
+              <input type="text" placeholder="zipcode" name="zipcode"/>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
           <!-- HISTORY -->
           <div></div>
         </div>
@@ -33,12 +50,17 @@
       <article>
         <!-- ARRAY MEASUREMENTS -->
         <aside>
-          <!-- ARRAY ROW WIDTH -->
-          <div></div>
-          <!-- MINIMUM MODULE ROW SPACING -->
+          <!-- INNER MEASUREMENTS -->
+          <div>
+            <!-- ARRAY MEASUREMENT -->
+            <div></div>
+            <!-- ROW MEASUREMENT -->
+            <div></div>
+          </div>
+          <!-- TOTAL MEASUREMENTS-->
           <div></div>
         </aside>
-        <!-- ARRAYS -->
+        <!-- ARRAYS TO DISPLAY -->
         <div>
           <!-- ARRAY #1 -->
           <div></div>
@@ -48,6 +70,7 @@
       </article>
     </div>
   </content>
+
   <!-- FOOTER -->
   <footer id="main-footer">
     <div class="footer-content container">
@@ -64,7 +87,7 @@
   </footer>
 
   <!-- JS SCRIPT LINK -->
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 
 </html>
