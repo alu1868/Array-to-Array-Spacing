@@ -18,7 +18,7 @@
     <container>
       <!-- NAV BAR -->
       <nav>
-        <a id="nav-logo" href="index.html"></a>
+        <a href="index.html"></a>
         <ul>
           <li><a href="index.html">Calculator</a></li>
           <li><a href="resources.html">Resources</a></li>
@@ -38,12 +38,17 @@
         <div>
           <!-- MODULE INFO INPUT -->
           <form>
-            <div>
-              <input type="text" placeholder="Module Name" name="name"/>
-              <input type="text" placeholder="Module Width" name="width"/>
-              <input type="text" placeholder="# of Rows" name="row"/>
-              <input type="text" placeholder="Array Tilt" name="tilt"/>
-              <input type="text" placeholder="zipcode" name="zipcode"/>
+            <div> 
+              <label for="module-name">Module Name</label>
+              <input type="text" placeholder="TESLA 400H" name="name"/>
+              <label for="module-width">Module Width (in)</label>
+              <input type="text" placeholder="41.2" name="width"/>
+              <label for="# of rows"># of Rows</label>
+              <input type="text" placeholder="4" name="row"/>
+              <label for="tilt">Array Tilt (°)</label>
+              <input type="text" placeholder="25" name="tilt"/>
+              <label for="zipcode">zipcode</label>
+              <input type="text" placeholder="78741" name="zipcode"/>
             </div>
             <button type="submit">Submit</button>
           </form>
