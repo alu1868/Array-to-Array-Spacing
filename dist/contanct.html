@@ -27,10 +27,67 @@
     </div>
   </header>
 
-  <footer id="main-footer">
-    <div class="footer-content container">
+  <!-- Section A: Contact Form -->
+  <section>
+    <div>
+        <h2>Contact Me</h2>
+        <div></div>
+        <p>Have a question? Have a suggestion? Just some thoughts?</p>
+        <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div>
+                <input type="text" class="text-input name-input" placeholder="Name" name="name" />
+                <input type="text" class="text-input subject-input" placeholder="Subject" name="subject" />
+                <input type="email" class="text-input email-input" placeholder="Email Address" name="email" />
+                <input type="text" class="text-input phone-input" placeholder="Phone Number" name="phone" />
+                <textarea class="text-input message-input" placeholder="Enter Message" name="message"></textarea>
+                <div>
+                    <div data-netlify-recaptcha="true"></div>
+                </div>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    <!-- Section B: Contact info -->
+    <div>
+        <div>
+            <div>
+            <div>
+                <h3>Email</h3>
+                <p>alu1868@gmail.com</p>
+            </div>
+            <div>
+                <h3>GitHub</h3>
+                <a href="https://github.com/alu1868">alu1868</a>
+            </div>
+            <div>
+                <h3>Address</h3>
+                <p>Austin, TX</p>
+            </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Section C: Tagline -->
+  <section>
+    <div>
+        <h1>Let's work together!</h1>
+    </div>
+  </section>
+  <!-- CONTENT END -->
+
+  <!-- Section C: Tagline -->
+  <section id="contact-c" class="bg-main py-5">
+    <div class="container">
+      <h1>Let's work together!</h1>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <container>
         <p>Copyright &copy; 2022 All Rights Reserved</p>
-        <div class="social">
+        <div>
             <a href="https://github.com/alu1868/Array-to-Array-Spacing" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
@@ -41,7 +98,8 @@
                 <i class="fas fa-paper-plane"></i>
             </a>
         </div>
-    </div>
+      </container>
   </footer>
+  
 </body>
 </html>
