@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #12a465;
+  --secondary-color: #0D7317;
+  --tertiary-color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,27 +12,27 @@
 
 body {
   /* more on this crazy alphanumerical value in a minute! */
-  color: #39a6b2;
+  color: var(--primary-color);
   font-family: Helvetica, Arial, sans-serif;
 }
 
 /* HEADER BEGIN*/
 header {
   padding: 20px 35px;
-  background-color: #39a6b2;
+  background-color: var(--primary-color);
 }
 
 header h1 {
   font-weight: bold;
   font-size: 36px;
-  color: #fce138;
+  color: var(--primary-color);
   margin: 0;
   display: inline;
 }
 
 header a {
   text-decoration: none;
-  color: #fce138;
+  color: var(--tertiary-color);
 }
 
 header nav {
@@ -46,26 +52,40 @@ header nav ul li a {
 /* HEADER END */
 
 /* FOOTER BEGIN */
-footer {
-  background: #fce138;
-  width: 100%;
-  padding: 40px 35px;
-}
-
-footer h2 {
-  display: inline;
-  color: #024e76;
-  font-size: 30px;
-  margin: 0;
-}
-
-footer div {
-  float: right;
-  line-height: 1.5;
-  text-align: right;
-}
+#main-footer {
+  background: var(--primary-color);
+  color: var(--tertiary-color);
+  height: 5rem; }
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center; }
+    #main-footer .footer-content .social .fab,
+    #main-footer .footer-content .social .fas {
+      margin-right: 1rem;
+      border: 2px var(--tertiary-color) solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+      color: var(--tertiary-color); }
+      #main-footer .footer-content .social .fab:hover,
+      #main-footer .footer-content .social .fas:hover {
+        background: var(--secondary-color) }
 
 footer a {
-  color: #024e76;
+  color: var(--tertiary-color);
 }
 /* FOOTER END */
+
+/* RESOURCE PAGE BEGIN */
+
+/* RESOURCE PAGE END */
+
+/* CONTACT PAGE BEGIN */
+
+/* CONTACT PAGE END */
+
