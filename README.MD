@@ -1,11 +1,11 @@
 # Array to Array Spacing
 
 ## Description
-Calculator to meausre the distance between two Ground Mounted PV Arrays in order to maximize solar access.
+Single page calculator application to meausre the distance between two Ground Mounted PV Arrays in order to maximize solar access, prevent your Arrays from blocking eachother's production in the worst conditions.
 
-## Links
+## Application Relevant Links
 
-## Sources
+## Sources Used
 * https://www.greentechrenewables.com/article/determining-module-inter-row-spacing
   - Main source used to determine array spacing
 * http://solardat.uoregon.edu/SunChartProgram.php
