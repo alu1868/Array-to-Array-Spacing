@@ -20,14 +20,16 @@ var formHandler = function(event) {
   console.log("zipcode: " + zipCode)
 }
 
+// Convert zip code > longitude/latitude
+
+// Calculate Row Width
+
 // Grab Solar Elevation Angle 
 
-// Grab Azimuth Correction Angle
+// Grab Azimuth Correction Angle 
 
 // Calculate Module Row Spacing
 
 // Calculate Height Difference
-
-// Calculate Row Width
 
 formEl.addEventListener("submit", formHandler)
