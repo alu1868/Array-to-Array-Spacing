@@ -12,22 +12,26 @@ var formHandler = function(event) {
   var numberOfRows = document.querySelector("input[name='number-of-rows']").value
   var arrayTilt = document.querySelector("input[name='array-tilt']").value
   var zipCode = document.querySelector("input[name='zip-code']").value
+  var apiKey = document.querySelector("input[name='api-key']").value
 
   console.log("module length: " + moduleLength)
   console.log("module width: " + moduleWidth)
   console.log("number of rows: " + numberOfRows)
   console.log("array tilt: " + arrayTilt)
   console.log("zipcode: " + zipCode)
+  console.log("api key: " + apiKey)
 
   // KEY - LOCATION - DATE - TIME - TZ - ALT
-  getSolarElevationAngle("key=12334567890ABC", "location=116.41,39.92", "date=20200531", "time=1230", "tz=0800", "alt=43")
+  getSolarElevationAngle(apiKey)
 }
 
-// Convert zip code > longitude/latitude
-var getSolarElevationAngle = function(key, location, date, time, tz, alt) {
-  // var apiUrl = "https://api.qweather.com/v7/astronomy/solar-elevation-angle?" + location + "&" + alt  + "&" + date + "&" + time + "&" + tz + "&" + key
+// "https://developer.nrel.gov/api/pvwatts/v8.json?api_key=DEMO_KEY&azimuth=180&system_capacity=4&losses=14&array_type=1&module_type=0&gcr=0.4&dc_ac_ratio=1.2&inv_eff=96.0&radius=0&dataset=nsrdb&tilt=10&address=boulder,%20co&soiling=12|4|45|23|9|99|67|12.54|54|9|0|7.6&albedo=0.3&bifaciality=0.7"
 
-  var apiUrl = 'https://api.qweather.com/v7/astronomy/solar-elevation-angle?location=120.34,36.08&alt=43&date=20210220&time=1230&tz=0800&key=12334567890ABC'
+// Convert zip code > longitude/latitude
+var getSolarElevationAngle = function(apiKey) {
+  // var apiUrl = "https://developer.nrel.gov/api/pvwatts/v8.json?api_key=" + apiKey + "&azimuth=180&" + 
+  
+  var apiUrl = "https://developer.nrel.gov/api/pvwatts/v8.json?api_key=" + apiKey + "&azimuth=180&system_capacity=4&losses=14&array_type=1&module_type=0&gcr=0.4&dc_ac_ratio=1.2&inv_eff=96.0&radius=0&dataset=nsrdb&tilt=10&address=boulder,%20co&soiling=12|4|45|23|9|99|67|12.54|54|9|0|7.6&albedo=0.3&bifaciality=0.7"
 
   fetch(apiUrl)
     .then(function(response){
