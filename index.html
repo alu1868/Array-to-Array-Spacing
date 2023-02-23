@@ -22,40 +22,46 @@
   <!-- Title -->
 
   <!-- Form -->
-  <main>
-    <div>
-      <div>
-        <h3>Enter Array Details</h3>
-        <form id="user-form">
-          <label>Module Length [in]</label>
-          <input type="number" name="module-length" value="69.1">
+  <header>
 
-          <label>Module Width [in]</label>
-          <input type="number" name="module-width" value="39.33">
+    <h1>Array Spacing Calculator</h1>
+    <p>Optimize the distance between your two arrays!</p>
+  </header>
 
-          <label>Number of rows</label>
-          <input type="number" name="number-of-rows" min="1" max="5" value="4">
+  <main class="flex-row justify-space-between">
+    <div class="col-12 col-md-4">
+      <div class="card">
+        <form id="user-form" class="card-body">
+          <div class="form-group">
 
-          <label>Tilt of Array [º]</label>
-          <input type="number" name="array-tilt" min="0" max="90" value="25">
+            <label>Module Width [in]</label>
+            <input type="number" name="module-width" value="39.3">
 
-          <label>Zip Code</label>
-          <input type="number" name="zip-code" min="00501" max="99950" value="78744">
+            <label>Number of rows</label>
+            <input type="number" name="number-of-rows" min="1" max="5" value="4">
 
-          <label>Map Quest API KEY</label>
-          <input type="text" name="mapquest-api-key">
+            <label>Tilt of Array [º]</label>
+            <input type="number" name="array-tilt" min="0" max="90" value="25">
 
-          <label>PV Watts API KEY</label>
-          <input type="text" name="pvwatts-api-key">
+            <label>Zip Code</label>
+            <input type="number" name="zip-code" min="00501" max="99950" value="78744">
 
-          <button type="submit">Submit</button>
+            <label>Map Quest API KEY</label>
+            <input type="text" name="mapquest-api-key">
+
+            <label>PV Watts API KEY</label>
+            <input type="text" name="pvwatts-api-key">
+
+            <button class="btn" type="submit">Submit</button>
+          </div>
         </form>
       </div>
     </div>
   </main>
+  
 
   <!-- JS SCRIPT LINK -->
-  <script src="./assets/js/script.js"></script>
+  <!-- <script src="./assets/js/script.js"></script> -->
 </body>
 
 </html>
