@@ -40,7 +40,8 @@ var getCoordinates = function() {
     .then(function(response){
       if(response.ok) {
         response.json().then(function(data){
-          console.log(data)
+          // console.log(data)
+          console.log(data.results)
         })
       } else {
         console.log("Failed to pull mapquest api")
@@ -57,7 +58,7 @@ var getSolarElevationAngle = function(apiKey) {
     .then(function(response){
       if(response.ok) {
         response.json().then(function(data){
-          console.log(data)
+          console.log("PV WATTS API:" + data)
         })
       } else {
         console.log("Failed to pull pvwatts api")
